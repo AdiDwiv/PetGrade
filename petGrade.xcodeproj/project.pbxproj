@@ -20,7 +20,6 @@
 		402E72B01E1FDAFE009901F7 /* Pet+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402E72AE1E1FDAFE009901F7 /* Pet+CoreDataProperties.swift */; };
 		402E72B21E1FFCF7009901F7 /* PetDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402E72B11E1FFCF7009901F7 /* PetDetailViewController.swift */; };
 		40B8A0FA1E20D727001ACDD1 /* EditQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B8A0F91E20D727001ACDD1 /* EditQuestionViewController.swift */; };
-		40B8A0FC1E2123B9001ACDD1 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 40B8A0FB1E2123B9001ACDD1 /* README.md */; };
 		40D9371D1E1535730053F81B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D9371C1E1535730053F81B /* AppDelegate.swift */; };
 		40D9371F1E1535730053F81B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D9371E1E1535730053F81B /* ViewController.swift */; };
 		40D937251E1535730053F81B /* petGrade.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 40D937231E1535730053F81B /* petGrade.xcdatamodeld */; };
@@ -45,7 +44,6 @@
 		402E72AE1E1FDAFE009901F7 /* Pet+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Pet+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		402E72B11E1FFCF7009901F7 /* PetDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetDetailViewController.swift; sourceTree = "<group>"; };
 		40B8A0F91E20D727001ACDD1 /* EditQuestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditQuestionViewController.swift; sourceTree = "<group>"; };
-		40B8A0FB1E2123B9001ACDD1 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		40D937191E1535730053F81B /* petGrade.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = petGrade.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		40D9371C1E1535730053F81B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		40D9371E1E1535730053F81B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -72,7 +70,6 @@
 		40D937101E1535730053F81B = {
 			isa = PBXGroup;
 			children = (
-				40B8A0FB1E2123B9001ACDD1 /* README.md */,
 				402E72AD1E1FDAFE009901F7 /* Pet+CoreDataClass.swift */,
 				402E72AE1E1FDAFE009901F7 /* Pet+CoreDataProperties.swift */,
 				402E72971E1E7267009901F7 /* Question+CoreDataClass.swift */,
@@ -189,7 +186,6 @@
 			files = (
 				402E72A61E1F77C4009901F7 /* SubmitViewController.swift in Sources */,
 				402E729D1E1E7267009901F7 /* Quiz+CoreDataClass.swift in Sources */,
-				40B8A0FC1E2123B9001ACDD1 /* README.md in Sources */,
 				40D9371F1E1535730053F81B /* ViewController.swift in Sources */,
 				402E72A21E1E8A07009901F7 /* QuizListTableViewCell.swift in Sources */,
 				40B8A0FA1E20D727001ACDD1 /* EditQuestionViewController.swift in Sources */,
