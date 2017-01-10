@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class SubmitViewController: UIViewController {
     
@@ -15,6 +16,7 @@ class SubmitViewController: UIViewController {
     
     var correctImageView: UIImageView!
     var correctTextView: UITextView!
+    var soundEffect: AVAudioPlayer!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,12 +33,24 @@ class SubmitViewController: UIViewController {
         correctTextView.backgroundColor = UIColor.white.withAlphaComponent(0)
         correctTextView.font = UIFont(name: "HelveticaNeue-Bold", size: 22)
         
-        if quizState.isLastCorrect {
-            correctImageView.image = UIImage(named: "correctIcon")
+        let successURL = URL(fileURLWithPath: Bundle.main.path(forResource: "success", ofType: "wav")!)
+        let failureURL = URL(fileURLWithPath: Bundle.main.path(forResource: "failure", ofType: "wav")!)
+        
+        do {
+            if quizState.isLastCorrect {
+                correctImageView.image = UIImage(named: "correctIcon")
+                let sound = try AVAudioPlayer(contentsOf: successURL)
+                soundEffect = sound
+            }
+            else {
+                correctImageView.image = UIImage(named: "wrongIcon")
+                let sound = try AVAudioPlayer(contentsOf: failureURL)
+                soundEffect = sound
+            }
+        } catch {
+            print(error.localizedDescription)
         }
-        else {
-            correctImageView.image = UIImage(named: "wrongIcon")
-        }
+        soundEffect.play()
         let passedCount = quizState.questionsAsked - (quizState.correctCount+quizState.incorrectCount)
         correctTextView.text = "Correct Answer: "+quizState.correctAnswer+"\n"+pet.name!+"'s Wellness: "+String(pet.wellness)+"\n\nScore: \t\t"+String(quizState.correctCount)+" correct \n     \t\t\t"+String(quizState.incorrectCount)+" wrong  \n     \t\t\t"+String(passedCount)+" passed"
        

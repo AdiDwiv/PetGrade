@@ -11,5 +11,5 @@ import CoreData
 
 
 public class Pet: NSManagedObject {
-
+    public var dateLastOpened: Date!
 }

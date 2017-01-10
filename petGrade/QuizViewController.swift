@@ -18,7 +18,9 @@ class QuizViewController: UIViewController, UITableViewDataSource, UITableViewDe
     var questionList: [Question] = []
     
     var questionTable: UITableView!
-    
+    var buttonCamera: UIButton!
+    var buttonPhotos: UIButton!
+    var buttonText: UIButton!
     
     var scrollView: UIScrollView!
     var removeMenuGesture: UITapGestureRecognizer!
@@ -44,6 +46,7 @@ class QuizViewController: UIViewController, UITableViewDataSource, UITableViewDe
         view.addSubview(questionTable)
        
         scrollView = UIScrollView()
+        createMenu()
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "New question", style: .plain, target: self, action: #selector(addQuestionTapped))
         
@@ -75,28 +78,39 @@ class QuizViewController: UIViewController, UITableViewDataSource, UITableViewDe
         removeMenuGesture.cancelsTouchesInView = false
     }
     
-    /*Opens dropdown menu
-     */
-    func addQuestionTapped() {
+    /**/
+    func createMenu() {
         let ypos = (navigationController?.navigationBar.frame.height)! + UIApplication.shared.statusBarFrame.height
         scrollView.frame = CGRect(x: view.frame.width*0.5, y: ypos, width: view.frame.width*0.5, height: view.frame.height*0.25 )
-        scrollView.backgroundColor = UIColor.darkGray.withAlphaComponent(0.85)
+        scrollView.backgroundColor = UIColor.darkGray.withAlphaComponent(0.95)
+        scrollView.layer.cornerRadius = 8.0
         
         let buttonHeight = scrollView.frame.height/3
-        let buttonCamera = UIButton(frame: CGRect(x: 0, y: 0, width: scrollView.frame.width, height: buttonHeight))
+
+        buttonCamera = UIButton(frame: CGRect(x: 0, y: 0, width: scrollView.frame.width, height: buttonHeight))
         buttonCamera.addTarget(self, action: #selector(cameraButtonPressed), for: .touchUpInside)
         buttonCamera.setTitle("Take photo", for: .normal)
-        let buttonPhotos = UIButton(frame: CGRect(x: 0, y: buttonHeight, width: scrollView.frame.width, height: buttonHeight))
+        buttonCamera.layer.borderColor = UIColor.white.withAlphaComponent(0.5).cgColor
+        buttonCamera.layer.borderWidth = 0.25
+        buttonPhotos = UIButton(frame: CGRect(x: 0, y: buttonHeight, width: scrollView.frame.width, height: buttonHeight))
         buttonPhotos.setTitle("Gallery", for: .normal)
         buttonPhotos.addTarget(self, action: #selector(photosButtonPressed), for: .touchUpInside)
-        let buttonText = UIButton(frame: CGRect(x: 0, y: buttonHeight*2, width: scrollView.frame.width, height: buttonHeight))
+        buttonPhotos.layer.borderColor = UIColor.white.withAlphaComponent(0.5).cgColor
+        buttonPhotos.layer.borderWidth = 0.25
+        buttonText = UIButton(frame: CGRect(x: 0, y: buttonHeight*2, width: scrollView.frame.width, height: buttonHeight))
         buttonText.setTitle("Enter text", for: .normal)
         buttonText.addTarget(self, action: #selector(textButtonPressed), for: .touchUpInside)
+        buttonText.layer.borderColor = UIColor.white.withAlphaComponent(0.5).cgColor
+        buttonText.layer.borderWidth = 0.25
         
         scrollView.addSubview(buttonCamera)
         scrollView.addSubview(buttonPhotos)
         scrollView.addSubview(buttonText)
-        
+    }
+    
+    /*Opens dropdown menu
+     */
+    func addQuestionTapped() {
         removeMenuGesture.cancelsTouchesInView = true
         view.addSubview(scrollView)
     }

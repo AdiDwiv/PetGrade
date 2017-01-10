@@ -26,7 +26,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         managedContext = appDelegate.persistentContainer.viewContext
         
-        petImageView = UIImageView(frame: CGRect(x: 0, y: view.frame.width*0.025, width: view.frame.width*0.85, height: view.frame.height*0.5))
+        petImageView = UIImageView(frame: CGRect(x: 0, y: view.frame.width*0.025, width: view.frame.width*0.75, height: view.frame.height*0.45))
         petImageView.center.x = view.center.x
         petImageView.image = UIImage(named: "placeholder")
         petImageView.clipsToBounds = true
@@ -92,30 +92,32 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
         }
         
         if pet.wellness == 100 {
-            petImageView.image = UIImage(named: "happySuperMax")
+            petImageView.image = UIImage(named: "happySuperMaxCropped")
         } else if pet.wellness >= 90 {
-            petImageView.image = UIImage(named: "happySuper")
+            petImageView.image = UIImage(named: "happySuperCropped")
         } else if pet.wellness >= 75 {
-            petImageView.image = UIImage(named: "happyMidAboveAverage")
+            petImageView.image = UIImage(named: "happyMidAboveAverageCropped")
         } else if pet.wellness >= 58 {
-            petImageView.image = UIImage(named: "happyMid")
+            petImageView.image = UIImage(named: "happyMidCropped")
         } else if pet.wellness >= 50 {
-            petImageView.image = UIImage(named: "happyMidPerturbed")
+            print("Check")
+            petImageView.image = UIImage(named: "happyMidPerturbedCropped")
         } else if pet.wellness >= 25 {
-            petImageView.image = UIImage(named: "distressedMid")
-        } else if pet.wellness >= 0 {
-            petImageView.image = UIImage(named: "distressedSuper")
+            print("Check")
+            petImageView.image = UIImage(named: "distressedMidCropped.png")
+        } else if pet.wellness > 0 {
+            petImageView.image = UIImage(named: "distressedSuperCropped")
         } else  {
-            petImageView.image = UIImage(named: "dead")
+            petImageView.image = UIImage(named: "deadCropped")
         }
         
         wellnessLabel.text = pet.name!+"'s wellness: "+String(pet.wellness)+"%"
     }
     
     func calculateWellness() {
-        
-        let dateLast = pet.dateOpened as! Date
-        let difference = pet.dayDifference(start: dateLast, end: Date())
+        pet.dateLastOpened = pet.dateOpened as! Date
+        pet.dateOpened = Date() as NSDate
+        let difference = pet.dayDifference(start: pet.dateLastOpened, end: Date())
         pet.changeWellness(change: -5*difference)
         pet.save(managedContext: managedContext)
     }

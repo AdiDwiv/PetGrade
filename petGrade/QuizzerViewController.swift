@@ -190,9 +190,9 @@ class QuizzerViewController: UIViewController, UITextFieldDelegate {
      */
     func calculateWellness() {
         print("here")
-        let dateOpen  = pet.dateOpened as! Date
-        pet.dateOpened = Date() as NSDate
-        let difference = pet.dayDifference(start: dateOpen, end: Date())
+        let dateOpen  = pet.dateLastOpened
+        
+        let difference = pet.dayDifference(start: dateOpen!, end: Date())
         let streakLength: Int = pet.dayDifference(start: pet.dateStreak as! Date, end: Date())
         var pointBoost: Int = 0
         if difference == 1 {
