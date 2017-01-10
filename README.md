@@ -1,7 +1,7 @@
 # PetGrade
 ### General information
 * PetGrade is a personalized quizzing app for iOS versions 10.2 and above.  
-* Developed by Aditya Dwivedi (ad629@cornell.edu)
+* Developed by Aditya Dwivedi (ad629@cornell.edu).
 * PetGrade lets users create personal quizzes based on the topics they're studying and/or are interested in. 
 * PetGrade assigns users a virtual pet with a customizable name, whose wellness depends on the user's performance.
 * The objective in PetGrade is to keep your pet alive and well.
@@ -57,7 +57,7 @@
 
 ### Credits
 
-* Custom art by Mandavi Dwivedi
+* Custom art by Mandavi Dwivedi.
 * Background patterns (taken colourlovers.com) -
  * Snowy Flora by candycrack
  * Box surprise mystery by plasticsatelite
