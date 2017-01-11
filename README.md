@@ -55,10 +55,10 @@
 ![Alt text](https://cloud.githubusercontent.com/assets/22662617/21822355/dd607a18-d79c-11e6-910c-8393a50d95f4.png)
 
 
-### Credits
+### Credits:-
 
 * Custom art by Mandavi Dwivedi.
-* Background patterns (taken colourlovers.com) -
+* Background patterns (taken from colourlovers.com) -
  * Snowy Flora by candycrack
  * Box surprise mystery by plasticsatelite
  * Dimension by agia
