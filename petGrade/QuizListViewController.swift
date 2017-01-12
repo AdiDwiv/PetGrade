@@ -47,14 +47,7 @@ class QuizListViewController: UIViewController, UITableViewDataSource, UITableVi
     override func viewWillAppear(_ animated: Bool) {
         //fetching quizzes
         fetchQuizData()
-        if quizList.count != 0  {
-            if !hasTable {
-                view.addSubview(quizTable)
-                hasTable = true
-            }
-        }
-          reload()
-        
+        reload()
     }
     
     func newButtonPressed() {
@@ -118,7 +111,7 @@ class QuizListViewController: UIViewController, UITableViewDataSource, UITableVi
      */
     func reload()  {
         quizTable.reloadData()
-        if !hasTable {
+        if !hasTable && quizList.count != 0{
             noQuizLabel.removeFromSuperview()
             //view.reloadInputViews()
             view.addSubview(quizTable)
@@ -126,6 +119,7 @@ class QuizListViewController: UIViewController, UITableViewDataSource, UITableVi
         }
         else if quizList.count == 0 {
             quizTable.removeFromSuperview()
+            hasTable = false
             view.addSubview(noQuizLabel)
         }
     }
