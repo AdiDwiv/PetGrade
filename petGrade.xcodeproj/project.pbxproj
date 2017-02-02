@@ -74,12 +74,7 @@
 		40D937101E1535730053F81B = {
 			isa = PBXGroup;
 			children = (
-				402E72AD1E1FDAFE009901F7 /* Pet+CoreDataClass.swift */,
-				402E72AE1E1FDAFE009901F7 /* Pet+CoreDataProperties.swift */,
-				402E72971E1E7267009901F7 /* Question+CoreDataClass.swift */,
-				402E72981E1E7267009901F7 /* Question+CoreDataProperties.swift */,
-				402E72991E1E7267009901F7 /* Quiz+CoreDataClass.swift */,
-				402E729A1E1E7267009901F7 /* Quiz+CoreDataProperties.swift */,
+				40EBC4B81E43BB7F00AF3A78 /* Core data model */,
 				40D9371B1E1535730053F81B /* petGrade */,
 				40D9371A1E1535730053F81B /* Products */,
 			);
@@ -97,25 +92,54 @@
 			isa = PBXGroup;
 			children = (
 				40D9371C1E1535730053F81B /* AppDelegate.swift */,
+				40EBC4B91E43BBCA00AF3A78 /* ViewControllers */,
+				40EBC4B71E43BB4700AF3A78 /* TableViewCells */,
+				40D937261E1535730053F81B /* Assets.xcassets */,
+				40D937281E1535730053F81B /* LaunchScreen.storyboard */,
+				40D9372B1E1535730053F81B /* Info.plist */,
+				40D937231E1535730053F81B /* petGrade.xcdatamodeld */,
+				4015CFF21E24C8BA0048F460 /* failure.wav */,
+				4015CFF31E24C8BA0048F460 /* success.wav */,
+			);
+			path = petGrade;
+			sourceTree = "<group>";
+		};
+		40EBC4B71E43BB4700AF3A78 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				40D937391E1BF74F0053F81B /* QuizTableViewCell.swift */,
+				402E72A11E1E8A07009901F7 /* QuizListTableViewCell.swift */,
+			);
+			name = TableViewCells;
+			sourceTree = "<group>";
+		};
+		40EBC4B81E43BB7F00AF3A78 /* Core data model */ = {
+			isa = PBXGroup;
+			children = (
+				402E729A1E1E7267009901F7 /* Quiz+CoreDataProperties.swift */,
+				402E72991E1E7267009901F7 /* Quiz+CoreDataClass.swift */,
+				402E72971E1E7267009901F7 /* Question+CoreDataClass.swift */,
+				402E72981E1E7267009901F7 /* Question+CoreDataProperties.swift */,
+				402E72AE1E1FDAFE009901F7 /* Pet+CoreDataProperties.swift */,
+				402E72AD1E1FDAFE009901F7 /* Pet+CoreDataClass.swift */,
+			);
+			name = "Core data model";
+			sourceTree = "<group>";
+		};
+		40EBC4B91E43BBCA00AF3A78 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
 				40D9371E1E1535730053F81B /* ViewController.swift */,
 				402E72B11E1FFCF7009901F7 /* PetDetailViewController.swift */,
 				40D937311E1541700053F81B /* QuizListViewController.swift */,
 				40D937351E18F5D80053F81B /* QuizViewController.swift */,
 				402E72A71E1FB3BA009901F7 /* AddTextQuestionViewController.swift */,
 				40B8A0F91E20D727001ACDD1 /* EditQuestionViewController.swift */,
-				40D937391E1BF74F0053F81B /* QuizTableViewCell.swift */,
-				40D937261E1535730053F81B /* Assets.xcassets */,
-				40D937281E1535730053F81B /* LaunchScreen.storyboard */,
-				40D9372B1E1535730053F81B /* Info.plist */,
-				40D937231E1535730053F81B /* petGrade.xcdatamodeld */,
 				402E729F1E1E88B9009901F7 /* QuizChooseViewController.swift */,
-				402E72A11E1E8A07009901F7 /* QuizListTableViewCell.swift */,
 				402E72A31E1E90F5009901F7 /* QuizzerViewController.swift */,
 				402E72A51E1F77C4009901F7 /* SubmitViewController.swift */,
-				4015CFF21E24C8BA0048F460 /* failure.wav */,
-				4015CFF31E24C8BA0048F460 /* success.wav */,
 			);
-			path = petGrade;
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
