@@ -56,8 +56,6 @@
 
 
 ### Credits:-
-
-* Custom art by Mandavi Dwivedi.
 * Background patterns (taken from colourlovers.com) -
  * Snowy Flora by candycrack
  * Box surprise mystery by plasticsatelite
